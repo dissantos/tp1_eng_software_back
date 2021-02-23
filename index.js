@@ -25,7 +25,7 @@ app.use(require('./api/agenda_req'))
 
 
 // listen for requests on port 8000
-const port = process.env.PORT || 8000
+const port = 8000
 const listener = app.listen(port, () => {
     console.log('Serviço executando na porta ' + listener.address().port)
 })

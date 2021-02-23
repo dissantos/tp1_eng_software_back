@@ -15,7 +15,7 @@ const CasaSchema = new Schema({
     logradouro: String,
     numero: Number,
     complemento: String,
-    CEP: Number
+    CEP: String
 })
 
 module.exports = mongoose.model('Casa', CasaSchema, 'casa');

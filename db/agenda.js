@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const AgendaSchema = new Schema({
     data: Date,
-    codigo_imovel: Number,
+    codigo_imovel: String,
     nome: String,
     CPF: String,
     telefone: String
