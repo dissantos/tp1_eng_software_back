@@ -23,9 +23,15 @@ app.use(require('./api/casa_req'))
 app.use(require('./api/usuario_req'))
 app.use(require('./api/agenda_req'))
 
+app.all('', (req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '');
+    res.setHeader('Access-Control-Allow-Headers','Origin, X-Requested-With, Content-Type,Accept, Authortization');
+    res.setHeader('Acces-Control-Allow-Methods','GET, POST, PUT, DELETE');
+    next();
+});
 
 // listen for requests on port 8000
-const port = 8000
+const port = process.env.PORT || 8000
 const listener = app.listen(port, () => {
     console.log('Serviço executando na porta ' + listener.address().port)
 })
